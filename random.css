@@ -1,73 +1,76 @@
-/* hide threads button */
+/* Hide Threads button */
 .iconWrapper__9293f[aria-label="Threads"] {
-    display: none !important;
+  display: none !important;
 }
 
-/* Remove Profile Reactions */
-[class*='statusPopover'], [class*='avatarPopover__'], [class*='activityPopover__'] {display:none;}
-
-/* fix long discord bios */
-[class^=userPopoutInner_] [class^=blockquoteContainer_] {
-  max-height: 90px;
+/* Hide profile popovers: status, avatar, activity */
+[class*="statusPopover"],
+[class*="avatarPopover__"],
+[class*="activityPopover__"] {
+  display: none !important;
 }
 
-/**
-  * @name Better Pickers
-  * @author obsidianninja11
-  * @description Makes the soundboard/emoji pickers better and less intrusive.
-  * @authorId 683171006717755446
-*/
+/* Fix long Discord bios (limit blockquote height) */
+[class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
+  max-height: 90px !important;
+  overflow: hidden;
+}
 
-[class^=lockedEmoji_]:has(+[class*=emojiLockIconContainer_]),
-[class*=categorySectionNitroLocked_] [class*=emojiItem_]>img,
-[class*=soundRowNitroLocked_] [class^=soundButton_] {
+/* === Better Pickers by obsidianninja11 === */
+/* Desaturate and dim locked emoji/soundboard items */
+[class^="lockedEmoji_"]:has(+[class*="emojiLockIconContainer_"]),
+[class*="categorySectionNitroLocked_"] [class*="emojiItem_"] > img,
+[class*="soundRowNitroLocked_"] [class^="soundButton_"] {
   filter: grayscale(1) brightness(0.75);
 }
 
-[class^=emojiLockIconContainer_],
-[class^=picker_] [class^=sectionFooter_],
-:is(#emoji-picker-tab-panel, [class^=picker_]) :is(
-  [class^=upsellContainer_],
-  [class^=nitroBottomDivider_],
-  [class^=categoryItemLockIconContainer_]
-) {
-  display: none;
+/* Hide Nitro upsell UI */
+[class^="emojiLockIconContainer_"],
+[class^="picker_"] [class^="sectionFooter_"],
+#emoji-picker-tab-panel [class^="upsellContainer_"],
+#emoji-picker-tab-panel [class^="nitroBottomDivider_"],
+#emoji-picker-tab-panel [class^="categoryItemLockIconContainer_"] {
+  display: none !important;
 }
 
-#emoji-picker-tab-panel [class*=categorySectionNitroLocked_],
-[class^=picker_] :is(
-  [class*=sectionContainerNitroLocked_],
-  [class*=soundRowNitroLocked_]
-) {
-  background-color: transparent;
+/* Remove background from locked sections */
+#emoji-picker-tab-panel [class*="categorySectionNitroLocked_"],
+[class^="picker_"] [class*="sectionContainerNitroLocked_"],
+[class^="picker_"] [class*="soundRowNitroLocked_"] {
+  background-color: transparent !important;
 }
 
-#emoji-picker-tab-panel [class^=closeButton_] {
+/* Adjust close button in picker */
+#emoji-picker-tab-panel [class^="closeButton_"] {
   padding: 16px 16px calc(100% - 106px) calc(100% - 40px);
   margin: 0;
 }
-[class^=picker_] {
-  >[class^=container] [class^=closeButton_] {
+
+/* Picker layout and padding fixes */
+[class^="picker_"] {
+  /* Close button in top container */
+  > [class^="container"] [class^="closeButton_"] {
     padding: 16px 16px calc(420px - 106px) calc(100% - 40px);
     margin: 0;
   }
 
-  [class^=buttonOverlayActions_] {
+  /* Soundboard button spacing */
+  [class^="buttonOverlayActions_"] {
     padding: 0;
   }
-  [class^=secondaryButton_] {
+
+  [class^="secondaryButton_"] {
     padding: 8px;
   }
-}
 
-#emoji-picker-tab-panel, [class^=picker_] {
-  [class^=nitroTopDividerShadow_],
-  [class^=nitroTopDividerLower_] {
+  /* Divider visuals */
+  [class^="nitroTopDividerShadow_"],
+  [class^="nitroTopDividerLower_"] {
     visibility: hidden;
   }
-  [class^=nitroTopDividerLock],
-  [class^=nitroTopDividerLower_] {
+
+  [class^="nitroTopDividerLock"],
+  [class^="nitroTopDividerLower_"] {
     background: var(--background-accent);
   }
 }
-
