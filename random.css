@@ -1,6 +1,9 @@
 /* Reverts discords new icons (eg mute, deafen, threads etc) */
 @import url(https://raw.githubusercontent.com/Cats1337/VencordStuff/refs/heads/main/SemiFixIcons.css);
 
+/* Remove nitro upsells fixes broken icon in chatbar */
+@import url('https://d3sox.me/complementary-discord-theme/hide-nitro-upselling.theme.css');
+
 /* Hide Threads button */
 .iconWrapper__9293f[aria-label="Threads"] {
   display: none !important;
