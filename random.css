@@ -1,3 +1,6 @@
+/* Reverts discords new icons (eg mute, deafen, threads etc) */
+@import url(https://raw.githubusercontent.com/Cats1337/VencordStuff/refs/heads/main/SemiFixIcons.css);
+
 /* Hide Threads button */
 .iconWrapper__9293f[aria-label="Threads"] {
   display: none !important;
