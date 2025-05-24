@@ -34,6 +34,33 @@
   overflow: hidden;
 }
 
+/* Hide shitty nitro tooltip */
+.tooltipWordmarkContainer_f240e3 {
+       display: none;
+       padding: 0;
+}
+
+.tooltipContainer_f240e3 > img {
+    display: none;
+}
+
+.tooltipContainer_f240e3 > h1 {
+    display: none;
+    padding: 0;
+}
+
+.tooltipContainer_f240e3 {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.tooltipDescription_f240e3 {
+    color: white !important;
+    font-size: 14px;
+    padding: 0;
+}
+
+
 /* === Better Pickers by obsidianninja11 === */
 /* Desaturate and dim locked emoji/soundboard items */
 [class^="lockedEmoji_"]:has(+[class*="emojiLockIconContainer_"]),
@@ -92,3 +119,5 @@
     background: var(--background-accent);
   }
 }
+
+
