@@ -3,6 +3,21 @@
   display: none !important;
 }
 
+/* remove gradient glow in chat and user list */
+.threeColorGradient_e5de78,
+.twoColorGradient_e5de78 {
+  &.usernameGradient_e5de78 {
+    color: color-mix(in lab, var(--custom-gradient-color-1), var(--custom-gradient-color-2));
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+
+  &::after,
+  &.nameGlow__703b9 {
+      display: none;
+  }
+}
+
 /* Hide profile popovers: status, avatar, activity */
 [class*="statusPopover"],
 [class*="avatarPopover__"],
