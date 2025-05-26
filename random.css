@@ -1,120 +1,110 @@
-/* Hide Threads button */
-.iconWrapper__9293f[aria-label="Threads"] {
-  display: none !important;
+/* Hide Threads button */ 
+.iconWrapper__9293f[aria-label="Threads"] { 
+  display: none !important; 
+} 
+ 
+/* remove gradient glow in chat and user list */ 
+.threeColorGradient_e5de78, 
+.twoColorGradient_e5de78 { 
+  /* Replacing nested SCSS & with direct selectors */
+} 
+
+.threeColorGradient_e5de78.usernameGradient_e5de78, 
+.twoColorGradient_e5de78.usernameGradient_e5de78 { 
+  color: color-mix(in lab, var(--custom-gradient-color-1), var(--custom-gradient-color-2)); 
+  background: none; 
+  -webkit-text-fill-color: initial; 
+} 
+
+.threeColorGradient_e5de78::after, 
+.twoColorGradient_e5de78::after, 
+.nameGlow__703b9 { 
+  display: none; 
+} 
+ 
+/* Hide profile popovers: status, avatar, activity */ 
+[class*="statusPopover"], 
+[class*="avatarPopover__"], 
+[class*="activityPopover__"] { 
+  display: none !important; 
+} 
+ 
+/* Fix long Discord bios (limit blockquote height) */ 
+[class^="userPopoutInner_"] [class^="blockquoteContainer_"] { 
+  max-height: 90px !important; 
+  overflow: hidden; 
+} 
+ 
+/* Hide shitty nitro tooltip */ 
+.tooltipWordmarkContainer_f240e3, 
+.tooltipContainer_f240e3 > img, 
+.tooltipContainer_f240e3 > h1 { 
+  display: none !important; 
+} 
+ 
+.tooltipContainer_f240e3 { 
+  padding: 0 !important; 
+  margin: 0 auto !important; 
+} 
+ 
+.tooltipDescription_f240e3 { 
+  color: white !important; 
+  font-size: 14px; 
+  padding: 0 !important; 
+} 
+ 
+/* === Better Pickers by obsidianninja11 === */ 
+
+/* Desaturate and dim locked emoji/soundboard items WITH :has() - FPS SUICIDE */
+[class^="lockedEmoji_"]:has(+[class*="emojiLockIconContainer_"]), 
+[class*="categorySectionNitroLocked_"] [class*="emojiItem_"] > img, 
+[class*="soundRowNitroLocked_"] [class^="soundButton_"] { 
+  filter: grayscale(1) brightness(0.75); 
+} 
+ 
+/* Hide Nitro upsell UI */ 
+[class^="emojiLockIconContainer_"], 
+[class^="picker_"] [class^="sectionFooter_"], 
+#emoji-picker-tab-panel [class^="upsellContainer_"], 
+#emoji-picker-tab-panel [class^="nitroBottomDivider_"], 
+#emoji-picker-tab-panel [class^="categoryItemLockIconContainer_"] { 
+  display: none !important; 
+} 
+ 
+/* Remove background from locked sections */ 
+#emoji-picker-tab-panel [class*="categorySectionNitroLocked_"], 
+[class^="picker_"] [class*="sectionContainerNitroLocked_"], 
+[class^="picker_"] [class*="soundRowNitroLocked_"] { 
+  background-color: transparent !important; 
+} 
+ 
+/* Adjust close button in picker */ 
+#emoji-picker-tab-panel [class^="closeButton_"] { 
+  padding: 16px 16px calc(100% - 106px) calc(100% - 40px); 
+  margin: 0 !important; 
+} 
+ 
+/* Picker layout and padding fixes */ 
+[class^="picker_"] > [class^="container"] [class^="closeButton_"] { 
+  padding: 16px 16px calc(420px - 106px) calc(100% - 40px); 
+  margin: 0 !important; 
+} 
+ 
+[class^="picker_"] [class^="buttonOverlayActions_"] { 
+  padding: 0 !important; 
+} 
+ 
+[class^="picker_"] [class^="secondaryButton_"] { 
+  padding: 8px !important; 
+} 
+ 
+/* Divider visuals - hide but preserve layout */
+[class^="nitroTopDividerShadow_"], 
+[class^="nitroTopDividerLower_"] { 
+  visibility: hidden; 
+} 
+ 
+[class^="nitroTopDividerLock"], 
+[class^="nitroTopDividerLower_"] { 
+  background: var(--background-accent); 
 }
-
-/* remove gradient glow in chat and user list */
-.threeColorGradient_e5de78,
-.twoColorGradient_e5de78 {
-  &.usernameGradient_e5de78 {
-    color: color-mix(in lab, var(--custom-gradient-color-1), var(--custom-gradient-color-2));
-    background: none;
-    -webkit-text-fill-color: initial;
-  }
-
-  &::after,
-  &.nameGlow__703b9 {
-      display: none;
-  }
-}
-
-/* Hide profile popovers: status, avatar, activity */
-[class*="statusPopover"],
-[class*="avatarPopover__"],
-[class*="activityPopover__"] {
-  display: none !important;
-}
-
-/* Fix long Discord bios (limit blockquote height) */
-[class^="userPopoutInner_"] [class^="blockquoteContainer_"] {
-  max-height: 90px !important;
-  overflow: hidden;
-}
-
-/* Hide shitty nitro tooltip */
-.tooltipWordmarkContainer_f240e3 {
-       display: none;
-       padding: 0;
-}
-
-.tooltipContainer_f240e3 > img {
-    display: none;
-}
-
-.tooltipContainer_f240e3 > h1 {
-    display: none;
-    padding: 0;
-}
-
-.tooltipContainer_f240e3 {
-    padding: 0;
-    margin: 0 auto;
-}
-
-.tooltipDescription_f240e3 {
-    color: white !important;
-    font-size: 14px;
-    padding: 0;
-}
-
-
-/* === Better Pickers by obsidianninja11 === */
-/* Desaturate and dim locked emoji/soundboard items */
-[class^="lockedEmoji_"]:has(+[class*="emojiLockIconContainer_"]),
-[class*="categorySectionNitroLocked_"] [class*="emojiItem_"] > img,
-[class*="soundRowNitroLocked_"] [class^="soundButton_"] {
-  filter: grayscale(1) brightness(0.75);
-}
-
-/* Hide Nitro upsell UI */
-[class^="emojiLockIconContainer_"],
-[class^="picker_"] [class^="sectionFooter_"],
-#emoji-picker-tab-panel [class^="upsellContainer_"],
-#emoji-picker-tab-panel [class^="nitroBottomDivider_"],
-#emoji-picker-tab-panel [class^="categoryItemLockIconContainer_"] {
-  display: none !important;
-}
-
-/* Remove background from locked sections */
-#emoji-picker-tab-panel [class*="categorySectionNitroLocked_"],
-[class^="picker_"] [class*="sectionContainerNitroLocked_"],
-[class^="picker_"] [class*="soundRowNitroLocked_"] {
-  background-color: transparent !important;
-}
-
-/* Adjust close button in picker */
-#emoji-picker-tab-panel [class^="closeButton_"] {
-  padding: 16px 16px calc(100% - 106px) calc(100% - 40px);
-  margin: 0;
-}
-
-/* Picker layout and padding fixes */
-[class^="picker_"] {
-  /* Close button in top container */
-  > [class^="container"] [class^="closeButton_"] {
-    padding: 16px 16px calc(420px - 106px) calc(100% - 40px);
-    margin: 0;
-  }
-
-  /* Soundboard button spacing */
-  [class^="buttonOverlayActions_"] {
-    padding: 0;
-  }
-
-  [class^="secondaryButton_"] {
-    padding: 8px;
-  }
-
-  /* Divider visuals */
-  [class^="nitroTopDividerShadow_"],
-  [class^="nitroTopDividerLower_"] {
-    visibility: hidden;
-  }
-
-  [class^="nitroTopDividerLock"],
-  [class^="nitroTopDividerLower_"] {
-    background: var(--background-accent);
-  }
-}
-
-
