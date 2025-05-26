@@ -1,6 +1,3 @@
-/* Remove nitro upsells fixes broken icon in chatbar */
-@import url('https://d3sox.me/complementary-discord-theme/hide-nitro-upselling.theme.css');
-
 /* Hide Threads button */
 .iconWrapper__9293f[aria-label="Threads"] {
   display: none !important;
