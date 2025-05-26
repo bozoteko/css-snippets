@@ -108,3 +108,15 @@
 [class^="nitroTopDividerLower_"] { 
   background: var(--background-accent); 
 }
+
+/* Remove Nitro tenure tooltip bloat - no extra text, less laggy(?) */
+[class^="tooltipContainer_"]:has([class^="tooltipWordmarkContainer_"]) {
+    padding: initial;
+    & img, h1, h2, [class^="tooltipWordmarkContainer_"] { display: none; }
+    
+    & [class*="tooltipDescription_"] {
+        color: inherit!important;
+        font: inherit;
+        margin: inherit;
+    }
+}
