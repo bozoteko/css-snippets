@@ -1,4 +1,4 @@
-/* Reverts new duscird ui to 2020 */ 
+/* Reverts new discord ui to 2020 using https://github.com/milbits/oldcord/tree/main */ 
 @import url("https://milbits.github.io/oldcord/src/components/vars.css");
 @import url("https://milbits.github.io/oldcord/src/components/color.css");
 @import url("https://milbits.github.io/oldcord/src/components/imgs.css");
