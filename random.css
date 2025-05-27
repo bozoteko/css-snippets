@@ -1,122 +1,42 @@
-/* Hide Threads button */ 
-.iconWrapper__9293f[aria-label="Threads"] { 
-  display: none !important; 
-} 
- 
-/* remove gradient glow in chat and user list */ 
-.threeColorGradient_e5de78, 
-.twoColorGradient_e5de78 { 
-  /* Replacing nested SCSS & with direct selectors */
-} 
+/* Reverts new duscird ui to 2020 */ 
+@import url("https://milbits.github.io/oldcord/src/components/vars.css");
+@import url("https://milbits.github.io/oldcord/src/components/color.css");
+@import url("https://milbits.github.io/oldcord/src/components/imgs.css");
+@import url("https://milbits.github.io/oldcord/src/components/other.css");
+@import url("https://milbits.github.io/oldcord/src/components/redesign.css");
 
-.threeColorGradient_e5de78.usernameGradient_e5de78, 
-.twoColorGradient_e5de78.usernameGradient_e5de78 { 
-  color: color-mix(in lab, var(--custom-gradient-color-1), var(--custom-gradient-color-2)); 
-  background: none; 
-  -webkit-text-fill-color: initial; 
-} 
+/* Removes nitro shit */
+@import url("https://ukriu.github.io/cssCord/Other/blandProfile.css");
+@import url("https://raw.githubusercontent.com/ukriu/cssCord/refs/heads/main/Other/noSuperReactions.css");
+@import url('https://abbie.github.io/discord-css/import.css');
 
-.threeColorGradient_e5de78::after, 
-.twoColorGradient_e5de78::after, 
-.nameGlow__703b9 { 
-  display: none; 
-} 
- 
-/* Hide profile popovers: status, avatar, activity */ 
-[class*="statusPopover"], 
-[class*="avatarPopover__"], 
-[class*="activityPopover__"] { 
-  display: none !important; 
-} 
- 
-/* Fix long Discord bios (limit blockquote height) */ 
-[class^="userPopoutInner_"] [class^="blockquoteContainer_"] { 
-  max-height: 90px !important; 
-  overflow: hidden; 
-} 
- 
-/* Hide shitty nitro tooltip */ 
-.tooltipWordmarkContainer_f240e3, 
-.tooltipContainer_f240e3 > img, 
-.tooltipContainer_f240e3 > h1 { 
-  display: none !important; 
-} 
- 
-.tooltipContainer_f240e3 { 
-  padding: 0 !important; 
-  margin: 0 auto !important; 
-} 
- 
-.tooltipDescription_f240e3 { 
-  color: white !important; 
-  font-size: 14px; 
-  padding: 0 !important; 
-} 
- 
-/* === Better Pickers by obsidianninja11 === */ 
+:root {
+    --\\--hide-nameplates: true;
+    --\\--hide-guild-tags: true;
+    --\\--hide-profile-effects: true;
+    --\\--hide-avatar-decorations: false;
+    --\\--hide-gradient-glow-usernames: true;
+    --\\--hide-server-boost-goal: true;
+    --\\--hide-server-activity: true;
+    --\\--hide-user-activity: true;
+    --\\--hide-context-menu-quick-reactions: true;
+    --\\--hide-hover-quick-reactions: false;
+    --\\--hide-image-edit-button: true;
+    --\\--hide-gif-button: false;
+    --\\--hide-sticker-button: false;
+    --\\--hide-emoji-button: false;
+    --\\--hide-apps-button: true;
+    --\\--hide-gift-button: true;
+    --\\--hide-help-button: false;
+    --\\--hide-shop-button: false;
+    --\\--hide-nitro-button: true;
+    --\\--hide-nitro-upsells: true;
+    --\\--hide-vencord-desktop-platform-indicator: true;
+    --\\--hide-cluttery-badges: false;
+    /* ^ hides quest, hypesquad, active dev, and discriminator badges */
 
-/* Desaturate and dim locked emoji/soundboard items WITH :has() - FPS SUICIDE */
-[class^="lockedEmoji_"]:has(+[class*="emojiLockIconContainer_"]), 
-[class*="categorySectionNitroLocked_"] [class*="emojiItem_"] > img, 
-[class*="soundRowNitroLocked_"] [class^="soundButton_"] { 
-  filter: grayscale(1) brightness(0.75); 
-} 
- 
-/* Hide Nitro upsell UI */ 
-[class^="emojiLockIconContainer_"], 
-[class^="picker_"] [class^="sectionFooter_"], 
-#emoji-picker-tab-panel [class^="upsellContainer_"], 
-#emoji-picker-tab-panel [class^="nitroBottomDivider_"], 
-#emoji-picker-tab-panel [class^="categoryItemLockIconContainer_"] { 
-  display: none !important; 
-} 
- 
-/* Remove background from locked sections */ 
-#emoji-picker-tab-panel [class*="categorySectionNitroLocked_"], 
-[class^="picker_"] [class*="sectionContainerNitroLocked_"], 
-[class^="picker_"] [class*="soundRowNitroLocked_"] { 
-  background-color: transparent !important; 
-} 
- 
-/* Adjust close button in picker */ 
-#emoji-picker-tab-panel [class^="closeButton_"] { 
-  padding: 16px 16px calc(100% - 106px) calc(100% - 40px); 
-  margin: 0 !important; 
-} 
- 
-/* Picker layout and padding fixes */ 
-[class^="picker_"] > [class^="container"] [class^="closeButton_"] { 
-  padding: 16px 16px calc(420px - 106px) calc(100% - 40px); 
-  margin: 0 !important; 
-} 
- 
-[class^="picker_"] [class^="buttonOverlayActions_"] { 
-  padding: 0 !important; 
-} 
- 
-[class^="picker_"] [class^="secondaryButton_"] { 
-  padding: 8px !important; 
-} 
- 
-/* Divider visuals - hide but preserve layout */
-[class^="nitroTopDividerShadow_"], 
-[class^="nitroTopDividerLower_"] { 
-  visibility: hidden; 
-} 
- 
-[class^="nitroTopDividerLock"], 
-[class^="nitroTopDividerLower_"] { 
-  background: var(--background-accent); 
-}
-
-/* Remove Nitro tenure tooltip bloat - no extra text, less laggy(?) */
-[class^="tooltipContainer_"]:has([class^="tooltipWordmarkContainer_"]) {
-    padding: initial;
-    & img, h1, h2, [class^="tooltipWordmarkContainer_"] { display: none; }
-    
-    & [class*="tooltipDescription_"] {
-        color: inherit!important;
-        font: inherit;
-        margin: inherit;
-    }
+    --\\--darker-scrollbar: true;
+    --\\--darker-hovered-message: true;
+    --\\--prevent-sidebar-resizing: false;
+    --\\--fix-minor-icon-misalignments: true;
 }
