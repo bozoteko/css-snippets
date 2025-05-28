@@ -42,6 +42,36 @@
     --\\--prevent-sidebar-resizing: false;
     --\\--fix-minor-icon-misalignments: true;
 }
+/* Removes status bubbles */
+.outer_ab8609 {
+  max-width: 167px !important;
+}
+
+.outer_ab8609::before,
+.outer_ab8609::after {
+  display: none !important;
+}
+
+.container_ab8609 {
+  margin-top: 11px !important;
+  display: var(--add-custom-status-hide) !important;
+  /* No top or position changes here — stays in original place */
+}
+
+.inner_ab8609 .content_ab8609 .statusText_ab8609.italicPrompt_ab8609,
+.inner_ab8609 .content_ab8609 .addStatusPrompt_ab8609.italicPrompt_ab8609 {
+  font-size: 0 !important;
+}
+
+.inner_ab8609 .content_ab8609 .statusText_ab8609.italicPrompt_ab8609::after,
+.inner_ab8609 .content_ab8609 .addStatusPrompt_ab8609.italicPrompt_ab8609::after {
+  content: var(--add-custom-status-text);
+  font-size: 14px;
+}
+
+.inner_ab8609 .addStatusIcon_ab8609 {
+  margin-right: var(--add-custom-status-text-margin);
+}
 
 /*Fuck banner & pfp reaction an reply*/
 .avatarPopover__2d0ab, .statusPopover__2d0ab, .activityPopover__2d0ab{display:none;}
