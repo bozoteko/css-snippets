@@ -42,3 +42,6 @@
     --\\--prevent-sidebar-resizing: false;
     --\\--fix-minor-icon-misalignments: true;
 }
+
+/*Fuck banner & pfp reaction an reply*/
+.avatarPopover__2d0ab, .statusPopover__2d0ab, .activityPopover__2d0ab{display:none;}
