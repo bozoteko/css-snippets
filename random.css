@@ -5,8 +5,8 @@
 @import url("https://milbits.github.io/oldcord/src/components/other.css");
 @import url("https://milbits.github.io/oldcord/src/components/redesign.css");
 
-/*Currently not using - Reverts to 2020 profile ui*/
-/*@import url("https://milbits.github.io/oldcord/src/components/profile.css");*/
+/*Reverts to 2020 profile/user ui*/
+@import url("https://milbits.github.io/oldcord/src/components/profile.css");
 
 /* Removes nitro shit */
 @import url("https://raw.githubusercontent.com/ukriu/cssCord/refs/heads/main/Other/noSuperReactions.css");
