@@ -8,7 +8,8 @@ Revert's to 2020 discord using oldcord and removes some nitro upselling shit, de
 
 ## Maybe don't use anything listed below!
 
-### Swirly (kinda bricked my discord)
+### Swirly
+Basically bricked discord for a few seconds
 ```css
 @import url("https://raw.githubusercontent.com/bozoteko/css-snippets/refs/heads/main/stupid-css/swirly.css")
 ```
