@@ -1,0 +1,53 @@
+/* Animate only major visible components, not EVERYTHING */
+h1, h2, h3, h4, h5, h6,
+span, div[class*="name"],
+div[class*="message"],
+button, input, textarea {
+  font-family: 'Wingdings', cursive !important;
+  animation: neonCycle 10s linear infinite !important;
+  color: #00ffff !important;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff !important;
+  letter-spacing: 3px !important;
+  word-spacing: 6px !important;
+  font-size: 16px !important;
+  border: 1px dashed #ff00ff !important;
+  background: transparent !important;
+  box-shadow: 0 0 5px #00ffff !important;
+}
+
+/* Neon color cycle */
+@keyframes neonCycle {
+  0%   { color: #ff00ff; text-shadow: 0 0 2px #ff00ff; }
+  25%  { color: #00ffff; text-shadow: 0 0 2px #00ffff; }
+  50%  { color: #00ff00; text-shadow: 0 0 2px #00ff00; }
+  75%  { color: #ffff00; text-shadow: 0 0 2px #ffff00; }
+  100% { color: #ff00ff; text-shadow: 0 0 2px #ff00ff; }
+}
+
+/* Flip the screen upside-down and horizontally */
+html {
+  transform: rotate(180deg) scaleX(-1);
+  transform-origin: center;
+  filter: hue-rotate(180deg) saturate(180%) contrast(140%);
+}
+
+/* Ugly scrollbars still */
+::-webkit-scrollbar {
+  width: 20px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border: 2px dashed #ff00ff;
+  box-shadow: 0 0 5px #ff00ff;
+}
+
+/* Inputs remain usable, barely */
+input, textarea, button {
+  background: transparent !important;
+  color: inherit !important;
+  font-family: 'Wingdings', cursive !important;
+  border: 1px dashed #00ffff !important;
+  box-shadow: 0 0 4px #00ffff;
+  cursor: crosshair !important;
+}
