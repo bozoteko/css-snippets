@@ -1,0 +1,203 @@
+body {
+  background: repeating-conic-gradient(#ff00ff 0 10deg, #00ffff 10deg 20deg, #ffff00 20deg 30deg, #ff0000 30deg 40deg, #00ff00 40deg 50deg, #0000ff 50deg 60deg) !important;
+  filter: invert(1) hue-rotate(360deg) saturate(1000%) contrast(500%) brightness(200%);
+  animation: chaos 1s infinite linear alternate-reverse;
+}
+
+@keyframes chaos {
+  0% {filter: invert(0) hue-rotate(0deg) saturate(0%) contrast(100%) brightness(50%);}
+  50% {filter: invert(1) hue-rotate(180deg) saturate(1000%) contrast(500%) brightness(200%);}
+  100% {filter: invert(0) hue-rotate(360deg) saturate(0%) contrast(100%) brightness(50%);}
+}
+
+* {
+  font-family: 'Wingdings', 'Comic Sans MS', 'Courier New', cursive, monospace !important;
+  font-size: 50px !important;
+  color: transparent !important;
+  text-shadow: 2px 2px 10px #ff0000, -2px -2px 10px #00ff00, 5px 5px 10px #0000ff;
+  animation: flicker 0.1s infinite alternate;
+  text-transform: uppercase !important;
+  letter-spacing: 20px !important;
+  word-spacing: 100px !important;
+  user-select: none !important;
+  cursor: none !important;
+  mix-blend-mode: exclusion !important;
+  transform: skew(45deg, 15deg) rotate(45deg) scale(3);
+  filter: blur(3px);
+}
+
+@keyframes flicker {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.channels-2HsWGh {
+  animation: jitter 0.05s infinite;
+  transform-origin: center !important;
+  transform: rotate(720deg) translate(20px, -20px) scale(5) skew(20deg);
+}
+
+@keyframes jitter {
+  0%, 100% {transform: rotate(0) translate(0,0);}
+  25% {transform: rotate(15deg) translate(5px, -5px);}
+  50% {transform: rotate(-15deg) translate(-5px, 5px);}
+  75% {transform: rotate(30deg) translate(10px, 10px);}
+}
+
+.messageContent-2t3eCI {
+  font-size: 3px !important;
+  font-weight: 900 !important;
+  color: transparent !important;
+  background: repeating-linear-gradient(45deg, #ff00ff 0 2px, #00ffff 2px 4px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowFlash 0.05s infinite alternate;
+  transform: rotate(180deg) skew(30deg);
+  user-select: none !important;
+  filter: blur(5px);
+}
+
+@keyframes rainbowFlash {
+  0% {background-position: 0% 50%;}
+  100% {background-position: 100% 50%;}
+}
+
+button {
+  font-size: 80px !important;
+  font-weight: 1000 !important;
+  border: 20px double #ff00ff !important;
+  box-shadow: 0 0 50px 20px #00ff00 !important;
+  animation: buttonShakeFlash 0.1s infinite alternate;
+  cursor: none !important;
+  transform: rotate(90deg) scale(4);
+}
+
+@keyframes buttonShakeFlash {
+  0% {background-color: #ff0000; transform: translate(5px, 5px) rotate(10deg);}
+  50% {background-color: #00ff00; transform: translate(-5px, -5px) rotate(-10deg);}
+  100% {background-color: #0000ff; transform: translate(5px, -5px) rotate(10deg);}
+}
+
+::-webkit-scrollbar {
+  width: 80px !important;
+  height: 80px !important;
+  background-color: #00ff00 !important;
+  animation: scrollbarPulse 1s infinite alternate;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff00ff !important;
+  border-radius: 40px !important;
+  border: 20px solid #000000 !important;
+  animation: scrollbarPulseThumb 1s infinite alternate;
+}
+
+@keyframes scrollbarPulse {
+  0% {background-color: #00ff00;}
+  50% {background-color: #ff0000;}
+  100% {background-color: #0000ff;}
+}
+
+@keyframes scrollbarPulseThumb {
+  0% {background-color: #ff00ff;}
+  50% {background-color: #00ffff;}
+  100% {background-color: #ffff00;}
+}
+
+.avatar-1BDn8e {
+  filter: blur(10px) !important;
+  transform: scale(5) rotateY(180deg) rotateZ(180deg) !important;
+  margin: -100px !important;
+  z-index: 999999 !important;
+  position: relative !important;
+}
+
+.sidebar-1tnWFu {
+  background-color: #000000 !important;
+  filter: invert(100%) hue-rotate(360deg) saturate(2000%) brightness(400%);
+  animation: sidebarFlashVibrate 0.05s infinite;
+  position: relative !important;
+}
+
+@keyframes sidebarFlashVibrate {
+  0% {background-color: #ff0000; left: 5px;}
+  25% {background-color: #00ff00; left: -5px;}
+  50% {background-color: #0000ff; left: 5px;}
+  75% {background-color: #ff00ff; left: -5px;}
+  100% {background-color: #00ffff; left: 5px;}
+}
+
+.textArea-12jD-V textarea {
+  font-size: 3px !important;
+  background-color: #ff0000 !important;
+  color: transparent !important;
+  text-shadow: 2px 2px 2px #00ff00, -2px -2px 2px #0000ff;
+  animation: blinkInput 0.1s infinite alternate;
+  letter-spacing: 30px !important;
+  transform: rotate(180deg);
+}
+
+@keyframes blinkInput {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.username-1A8OIy {
+  font-size: 100px !important;
+  font-weight: 1000 !important;
+  color: #ffff00 !important;
+  background-color: #000000 !important;
+  padding: 20px !important;
+  border-radius: 100% !important;
+  position: relative !important;
+  z-index: 100000 !important;
+  animation: spinForever 5s linear infinite;
+  margin-left: -80px !important;
+}
+
+@keyframes spinForever {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(720deg);}
+}
+
+.emoji-2D9t6S {
+  position: absolute !important;
+  transform: scale(10) rotate(1440deg) !important;
+  opacity: 0.2 !important;
+  animation: emojiExplosion 2s forwards;
+  pointer-events: none !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+
+@keyframes emojiExplosion {
+  0% {transform: scale(0) rotate(0deg);}
+  50% {transform: scale(20) rotate(720deg);}
+  100% {transform: scale(10) rotate(1440deg) translate(400px, -400px);}
+}
+
+.status-3mJr7s {
+  width: 80px !important;
+  height: 80px !important;
+  border: 10px solid #ff00ff !important;
+  animation: blinkSpin 0.5s infinite alternate;
+  border-radius: 50% !important;
+}
+
+@keyframes blinkSpin {
+  0% {opacity: 1; transform: rotate(0deg);}
+  100% {opacity: 0; transform: rotate(720deg);}
+}
+
+* {
+  border: 20px dashed #00ff00 !important;
+  animation: borderBlink 0.5s infinite alternate !important;
+  box-sizing: border-box !important;
+}
+@keyframes borderBlink {
+  0% {border-color: #00ff00;}
+  50% {border-color: #ff0000;}
+  100% {border-color: #0000ff;}
+}
