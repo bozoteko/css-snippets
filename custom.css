@@ -102,3 +102,34 @@ span[class*="timestampInline_"] time::before {
 span[class*="timestampInline_"] {
   font-size: 0px !important;
 }
+
+/* Aligned Chat Box and Typing indicator */
+.container_c48ade {
+    --custom-chat-input-margin-bottom: 22px !important;
+}
+
+:root {
+    --custom-channel-textarea-text-area-height: 42px;
+}
+
+/* Typing ... */
+.visual-refresh .base_b88801 {
+    font-size: 13.5px;
+    height: 22px;
+    display: flex !important;
+    align-items: center !important;
+    top: 44px !important;
+    padding-left: 4px !important;
+}
+
+/* Upload button in the text area */
+.attachWrapper__0923f {
+    height: 42px;
+    padding: 0px 0px 0px 10px !important;
+    display: flex;
+}
+
+/* Fixes the Annoying Space between chat and text area */
+.align-chat-input .scrollerSpacer__36d07 {
+    height: 32px;  /* lower this size if u want less space */
+}
