@@ -38,3 +38,56 @@
   clear: both;
   margin-top: .5ch;
 }
+
+:root {
+    --custom-app-top-bar-height: 22px
+}
+[class^=bar] {
+    padding: unset;
+    > [class^=title] {
+        position: relative;
+        padding-left: 8px;
+        > [class^=title] > [class^=icon] {
+            height: 16px;
+            width: 16px;
+        }
+    }
+    > [class^=trailing] {
+        gap: unset;
+        > [class^=recentsIcon] {
+            &:hover {
+                background-color: var(--background-modifier-hover);
+                color: var(--interactive-hover);
+            }
+            > [class^=button] {
+                height: 16px;
+                width: 16px;
+                padding: 3px 12px;
+                > [class^=iconBadge] {
+                     bottom: 2px;
+                     right: 11px;
+                }
+            }
+        }
+        > a[href="https://support.discord.com"] {
+            display: none;
+        }
+        > [class^=button]
+        {
+            height: 16px;
+            width: 16px;
+            padding: 3px 12px;
+            &:hover
+            {
+                background-color: var(--background-modifier-hover);
+                color: var(--interactive-hover);
+            }
+        }
+        > [class^=winButtons] {
+            gap: unset;
+            > [class^=winButton] {
+                width: calc(var(--custom-app-top-bar-height) * 2);
+            }
+        }
+    }
+}
