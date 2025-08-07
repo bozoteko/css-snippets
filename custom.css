@@ -1,3 +1,4 @@
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
 @import url("https://raw.githubusercontent.com/Augenbl1ck/Discord-Styles/refs/heads/main/expProfile.css");
 @import url(https://raw.githubusercontent.com/sadan4/discordStyles/refs/heads/main/src/cleanup/roundedProfileDecorations.css);
 .avatarPopover__2d0ab, .statusPopover__2d0ab, .activityPopover__2d0ab{display:none;}
@@ -92,17 +93,6 @@
             }
         }
     }
-}
-@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
-
-:root {
-    /* Only include this part if you wish to change these variables */
-    /* You can change the size but only to be less than 48px, you must change the blob scale too */
-    --guildbar-avatar-size: 48px;
-    --blob-scale: 48;
-
-    --guildbar-folder-size: var(--guildbar-avatar-size);
-    --folder-blob-scale: var(--blob-scale);
 }
 span[class*="timestampInline_"] time::before {
   content: attr(aria-label);
