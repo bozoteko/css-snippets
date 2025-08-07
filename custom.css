@@ -1,4 +1,5 @@
 @import url("https://raw.githubusercontent.com/Augenbl1ck/Discord-Styles/refs/heads/main/expProfile.css");
+@import url(https://raw.githubusercontent.com/sadan4/discordStyles/refs/heads/main/src/cleanup/roundedProfileDecorations.css);
 .avatarPopover__2d0ab, .statusPopover__2d0ab, .activityPopover__2d0ab{display:none;}
 .scrollerSpacer__36d07 {
 	height: 24px;
