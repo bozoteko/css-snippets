@@ -15,7 +15,7 @@
 :root {
     --\\--hide-nameplates: true;
     --\\--hide-guild-tags: true;
-    --\\--hide-profile-effects: true;
+    --\\--hide-profile-effects: false;
     --\\--hide-avatar-decorations: false;
     --\\--hide-gradient-glow-usernames: false;
     --\\--hide-server-boost-goal: true;
